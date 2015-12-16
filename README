@@ -1,0 +1,48 @@
+Libwhirlpool
+============
+
+WHIRLPOOL cryptographic hash function library for UNIX and Linux.
+
+Also provides 'whirlpoolsum' utility for easy calculation and checking WHIRLPOOL hashes similar to 'md5sum' and 'shaXXXsum'.
+
+
+Installation
+------------
+
+If you are a Fedora or RedHat Enterprise Linux (RHEL) user, you can install 'libwhirlpool' package from standard repositories:
+  * Fedora 22+: "dnf install libwhirlpool"
+  * RHEL, CentOS, etc: you need to enable EPEL repository and issue command
+    "yum install libwhirlpool"
+
+For other systems:
+  * Get the source from https://github.com/dfateyev/libwhirlpool
+    (clone repository, or grab a release tarball)
+  * Unpack the downloaded tarball if required
+  * Configure and build, as usual:
+      ./configure  (see "./configure --help" for all available options)
+      make
+      make install
+
+
+License
+-------
+
+This is free and unencumbered software released into the public domain.
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any means.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+Authors: Paulo S.L.M. Barreto, Vincent Rijmen (Whirlpool algorithm),
+Ævar Arnfjörð Bjarmason (improvements), Denis Fateyev (whirlpoolsum).
+
+
+Contact
+-------
+
+Libwhirlpool home page: https://github.com/dfateyev/libwhirlpool
+
+Report any bugs to 'denis@fateyev.com'

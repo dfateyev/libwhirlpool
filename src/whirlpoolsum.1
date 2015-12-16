@@ -1,0 +1,77 @@
+.\"  This page is written by Denis Fateyev, denis@fateyev.com.
+.\"  Freely distributable under Public Domain terms
+.TH WHIRLPOOLSUM "1" "October 2015" "whirlpoolsum" "User Commands"
+.SH NAME
+whirlpoolsum \- compute and check WHIRLPOOL message digest
+.SH SYNOPSIS
+.B whirlpoolsum
+[\fIOPTION\fR]... [\fIFILE\fR]...
+.SH DESCRIPTION
+.\" Add any additional description here
+.PP
+Print or check WHIRLPOOL (512\-bit) checksums.
+With no FILE, or when FILE is \-, read standard input.
+.TP
+\fB\-b\fR, \fB\-\-binary\fR
+read in binary mode
+.TP
+\fB\-c\fR, \fB\-\-check\fR
+read WHIRLPOOL sums from the FILEs and check them
+.TP
+\fB\-\-tag\fR
+create a BSD\-style checksum, always in binary mode
+.TP
+\fB\-t\fR, \fB\-\-text\fR
+read in text mode (default)
+.IP
+Note: There is no difference between binary and text mode option on GNU system.
+.SS "The following three options are useful only when verifying checksums:"
+.TP
+\fB\-\-quiet\fR
+don't print OK for each successfully verified file
+.TP
+\fB\-\-status\fR
+don't output anything, status code shows success
+.TP
+\fB\-w\fR, \fB\-\-warn\fR
+warn about improperly formatted checksum lines
+.TP
+\fB\-\-strict\fR
+with \fB\-\-check\fR, exit non\-zero for any invalid input
+.TP
+\fB\-\-test\fR
+invoke Whirlpool API test function and exit
+.TP
+\fB\-\-help\fR
+display this help and exit
+.TP
+\fB\-\-version\fR
+output version information and exit
+.PP
+The sums are computed as described in the official WHIRLPOOL specs.
+When checking, the input should be a former output of this program.
+The  default mode  is to print  a line with checksum,  a character
+indicating input mode ('*' for binary, space for text), and name
+for each FILE.
+
+.SH AUTHOR
+Written by Denis Fateyev. Based on WHIRLPOOL algorithm implementation
+by  Paulo S.L.M. Barreto and Vincent Rijmen,  and various improvements
+by  Avar Arnfjörð Bjarmason.
+.SH "REPORTING BUGS"
+Report whirlpoolsum bugs to 'denis@fateyev.com'
+.br
+Libwhirlpool home page: <https://github.com/dfateyev/libwhirlpool>
+.SH COPYRIGHT
+This is free and unencumbered software released into the public domain.
+Anyone  is free  to copy,  modify,  publish,  use,  compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any means.
+.br
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR  IMPLIED,  INCLUDING  BUT  NOT  LIMITED  TO  THE  WARRANTIES  OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+.SH "SEE ALSO"
+.BR sha256sum (1),
+.BR sha384sum (1),
+.BR sha512sum (1).
