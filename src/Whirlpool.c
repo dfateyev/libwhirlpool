@@ -1942,14 +1942,3 @@ static void makeIntermediateValues() {
     fflush(stdout);
 }
 #endif /* ?TRACE_INTERMEDIATE_VALUES */
-
-int main(int argc, char *argv[]) {
-    /* whirlpool_testAPI(); */
-    /* makeNESSIETestVectors(); */
-    makeISOTestVectors();
-#ifdef TRACE_INTERMEDIATE_VALUES
-    makeIntermediateValues();
-#endif /* ?TRACE_INTERMEDIATE_VALUES */
-    /* timing(); */
-    return 0;
-}
